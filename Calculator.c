@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
-const double pi=3.14159265;
+
 
 
 void simple(void){
