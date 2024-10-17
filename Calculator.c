@@ -110,20 +110,34 @@ void advncd(void){
 int main(){
     
     int m;
+    int status=1;
 
-    printf("\t\t\t\t\tSIMPLE CALCULATOR\n\n\nChoose Mode:\n 1: Simple\n 2: Advanced\n");
-    scanf("%d",&m);
+    printf("\t\t\t\t\tSIMPLE CALCULATOR\n\n");
 
-    switch (m){
+    while(status){
+        printf("\nChoose Mode:\n1:Simple Mode\n2:Advanced Mode\n\n3:EXIT\n");
+        scanf("%d",&m);
+
+        switch (m){
+        
         case 1:
             simple();
             break;
+        
         case 2:
             advncd();
             break;
+
+        case 3:
+            printf("\n\t\tTHANK YOU!\n");
+            status=0;
+            break;
+        
         default:
-            printf("Choose correct value: Enter 1 for Simple calculations or 2 for Advanved.\n");
-            return 0;        
+            printf("Choose correct value: Enter 1 for Simple Mode, 2 for Advanced Mode, or 3 to Exit.\n");
+            break;
+        }
     }
+    
    return 0; 
 }
